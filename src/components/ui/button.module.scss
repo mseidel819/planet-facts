@@ -23,3 +23,8 @@
   text-transform: uppercase;
   color: var(--white);
 }
+
+.active {
+  background-color: var(--sky-blue);
+  border: 1px solid transparent;
+}

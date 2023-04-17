@@ -97,3 +97,69 @@ li {
   line-height: 25px;
   color: var(--white);
 }
+
+.mercury {
+  background-color: var(--sky-blue) !important;
+}
+.venus {
+  background-color: var(--yellow) !important;
+}
+.earth {
+  background-color: var(--purple) !important;
+}
+.mars {
+  background-color: var(--red-orange) !important;
+}
+.jupiter {
+  background-color: var(--red) !important;
+}
+.saturn {
+  background-color: var(--orange) !important;
+}
+.uranus {
+  background-color: var(--teal) !important;
+}
+.neptune {
+  background-color: var(--blue) !important;
+}
+
+.mercury-nav {
+  &:hover {
+    border-top: 4px solid var(--sky-blue);
+  }
+}
+.venus-nav {
+  &:hover {
+    border-top: 4px solid var(--yellow);
+  }
+}
+.earth-nav {
+  &:hover {
+    border-top: 4px solid var(--purple);
+  }
+}
+.mars-nav {
+  &:hover {
+    border-top: 4px solid var(--red-orange);
+  }
+}
+.jupiter-nav {
+  &:hover {
+    border-top: 4px solid var(--red);
+  }
+}
+.saturn-nav {
+  &:hover {
+    border-top: 4px solid var(--orange);
+  }
+}
+.uranus-nav {
+  &:hover {
+    border-top: 4px solid var(--teal);
+  }
+}
+.neptune-nav {
+  &:hover {
+    border-top: 4px solid var(--blue);
+  }
+}

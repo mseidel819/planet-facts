@@ -50,5 +50,9 @@
 }
 .planets:hover {
   opacity: 1;
+  /* border-top: 4px solid var(--sky-blue); */
+}
+
+.active {
   border-top: 4px solid var(--sky-blue);
 }

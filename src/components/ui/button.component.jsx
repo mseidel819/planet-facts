@@ -1,15 +1,18 @@
+import { useState } from "react";
 import styles from "./button.module.scss";
 
-const Button = ({ onClick, children }) => {
-  //   const sectionNum =
-  //     section === "overview"
-  //       ? "01"
-  //       : section === "internal structure"
-  //       ? "02"
-  //       : "03";
+const Button = ({ color, active, onClick, children }) => {
+  let activeStyle = "";
+  let activeColor = "";
+  if (active) {
+    activeStyle = styles.active;
+    activeColor = color;
+  }
 
   return (
-    <button onClick={onClick} className={styles.button}>
+    <button
+      onClick={onClick}
+      className={`${styles.button} ${activeStyle} ${activeColor}`}>
       <div className={styles.buttonChildren}>{children}</div>
     </button>
   );
