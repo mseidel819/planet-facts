@@ -1,13 +1,20 @@
+@use "../../styles/breakpoints.scss" as *;
 @import url("https://fonts.googleapis.com/css2?family=Antonio:wght@500&family=League+Spartan:wght@400;700&display=swap");
 
 .nav_bar {
   display: flex;
+  flex-direction: column;
+
   justify-content: space-between;
   align-items: center;
   padding: 0px 40px 0px 32px;
   align-items: center;
   border-bottom: 1px solid rgba(260, 260, 260, 0.2);
-  height: 85px;
+  // height: 85px;
+
+  @include respond-to("medium") {
+    flex-direction: row;
+  }
 }
 .tabs_container {
   height: 100%;
@@ -55,4 +62,20 @@
 
 .active {
   border-top: 4px solid var(--sky-blue);
+}
+
+.mobile_nav_bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  border-bottom: 1px solid rgba(260, 260, 260, 0.2);
+}
+.hamburger {
+  background-color: transparent;
+  border: none;
+}
+
+.activeHamburger {
+  opacity: 0.5;
 }

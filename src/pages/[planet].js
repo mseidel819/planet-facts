@@ -18,8 +18,8 @@ const PlanetPage = () => {
 
   return (
     <>
-      <MainContent data={planetObj} />
-      <NumbersContent data={planetObj} />
+      {/* <MainContent data={planetObj} /> */}
+      {/* <NumbersContent data={planetObj} /> */}
     </>
   );
 };

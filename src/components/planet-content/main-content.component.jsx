@@ -13,7 +13,13 @@ const MainContent = ({ data }) => {
   return (
     <div className={styles.container}>
       <div className={styles.imgContainer}>
-        <Image priority alt={data.name} width="290" height="290" src={img} />
+        <Image
+          priority
+          alt={data.name}
+          height={data.size.height}
+          width={data.size.width}
+          src={img}
+        />
         {section === "geology" && (
           <Image
             className={styles.imgSpan}

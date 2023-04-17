@@ -1,0 +1,46 @@
+.container {
+  position: absolute;
+  width: 100vw;
+  z-index: 4;
+  background-color: var(--black);
+  background-image: url("../../../public/background-stars.svg");
+  //   padding: 44px 32px;
+}
+
+.inner {
+  padding: 24px 32px;
+}
+
+.menuItem {
+  border: none;
+  background-color: transparent;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0 20px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.left {
+  display: flex;
+  align-items: center;
+
+  &:before {
+    content: "";
+    height: 20px;
+    width: 20px;
+    background-color: blue;
+    border-radius: 1000px;
+  }
+}
+
+.name {
+  font-weight: 700;
+  font-size: 15px;
+  //   line-height: 25px;
+  /* identical to box height, or 167% */
+
+  text-align: center;
+  letter-spacing: 1.36364px;
+  text-transform: uppercase;
+}
