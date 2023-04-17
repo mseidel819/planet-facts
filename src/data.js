@@ -24,7 +24,7 @@ export const data = [
     images: {
       planet: "./assets/planet-mercury.svg",
       internal: "./assets/planet-mercury-internal.svg",
-      geology: "./assets/geology-mercury.png",
+      geology: "/assets/geology-mercury.png",
     },
   },
   {
@@ -51,7 +51,7 @@ export const data = [
     images: {
       planet: "./assets/planet-venus.svg",
       internal: "./assets/planet-venus-internal.svg",
-      geology: "./assets/geology-venus.png",
+      geology: "/assets/geology-venus.png",
     },
   },
   {
@@ -78,7 +78,7 @@ export const data = [
     images: {
       planet: "./assets/planet-earth.svg",
       internal: "./assets/planet-earth-internal.svg",
-      geology: "./assets/geology-earth.png",
+      geology: "/assets/geology-earth.png",
     },
   },
   {
@@ -105,7 +105,7 @@ export const data = [
     images: {
       planet: "./assets/planet-mars.svg",
       internal: "./assets/planet-mars-internal.svg",
-      geology: "./assets/geology-mars.png",
+      geology: "/assets/geology-mars.png",
     },
   },
   {
@@ -133,7 +133,7 @@ export const data = [
     images: {
       planet: "./assets/planet-jupiter.svg",
       internal: "./assets/planet-jupiter-internal.svg",
-      geology: "./assets/geology-jupiter.png",
+      geology: "/assets/geology-jupiter.png",
     },
   },
   {
@@ -160,7 +160,7 @@ export const data = [
     images: {
       planet: "./assets/planet-saturn.svg",
       internal: "./assets/planet-saturn-internal.svg",
-      geology: "./assets/geology-saturn.png",
+      geology: "/assets/geology-saturn.png",
     },
   },
   {
@@ -187,7 +187,7 @@ export const data = [
     images: {
       planet: "./assets/planet-uranus.svg",
       internal: "./assets/planet-uranus-internal.svg",
-      geology: "./assets/geology-uranus.png",
+      geology: "/assets/geology-uranus.png",
     },
   },
   {
@@ -214,7 +214,7 @@ export const data = [
     images: {
       planet: "./assets/planet-neptune.svg",
       internal: "./assets/planet-neptune-internal.svg",
-      geology: "./assets/geology-neptune.png",
+      geology: "/assets/geology-neptune.png",
     },
   },
 ];

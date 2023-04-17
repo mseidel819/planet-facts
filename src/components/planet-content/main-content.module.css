@@ -36,3 +36,14 @@
   margin: 0;
   margin-left: 28px;
 }
+
+.imgContainer {
+  position: relative;
+}
+
+.imgSpan {
+  position: absolute;
+  bottom: -130px;
+  transform: translateX(-50%);
+  left: 50%;
+}
