@@ -220,6 +220,7 @@ export const data = [
 ];
 
 export function getPlanetByName(name) {
-  const formattedName = name.charAt(0).toUpperCase() + name.slice(1);
-  return data.find((planet) => planet.name === formattedName);
+  if (!name) return;
+  // const formattedName = name.charAt(0).toUpperCase() + name.slice(1);
+  return data.find((planet) => planet.name === name);
 }

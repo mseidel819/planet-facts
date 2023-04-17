@@ -1,6 +1,8 @@
 import styles from "./nav-bar.module.css";
+import { useRouter } from "next/router";
 
 const NavBar = () => {
+  const router = useRouter();
   const planetArr = [
     "Mercury",
     "Venus",
@@ -12,16 +14,25 @@ const NavBar = () => {
     "Neptune",
   ];
 
+  const routeHandler = (route) => {
+    router.push(`/${route}`);
+  };
+
   return (
     <div className={styles.nav_bar}>
-      <h1 className={styles.nav_title}>The Planets</h1>
+      <button onClick={() => routeHandler("")} className={styles.nav_title}>
+        The Planets
+      </button>
 
       <div className={styles.tabs_container}>
         {planetArr.map((planet, i) => {
           return (
-            <h2 className={styles.planets} key={i}>
+            <button
+              key={i}
+              className={styles.planets}
+              onClick={() => routeHandler(planet)}>
               {planet}
-            </h2>
+            </button>
           );
         })}
       </div>

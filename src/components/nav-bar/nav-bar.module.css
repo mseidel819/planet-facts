@@ -20,12 +20,16 @@
 
 .nav_title {
   font-size: 28px;
-  /* font-family: "Antonio", sans-serif; */
-  font-weight: 500;
-  /* color: var(--white); */
-  /* line-height: 52px; */
-  letter-spacing: -1.5px;
-  /* text-transform: uppercase; */
+  font-family: "Antonio", sans-serif;
+  font-weight: 400;
+  color: var(--white);
+  /* line-height: 36px; */
+  letter-spacing: -1.05px;
+  text-transform: uppercase;
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
 
 .planets {
@@ -33,12 +37,16 @@
   font-family: "League Spartan", sans-serif;
   font-weight: 500;
   font-size: 11px;
+  text-transform: uppercase;
+  color: var(--white);
   letter-spacing: 1px;
   cursor: pointer;
   opacity: 0.75;
   padding-top: 36px;
   padding-bottom: 35px;
+  border: none;
   border-top: 4px solid transparent;
+  background-color: transparent;
 }
 .planets:hover {
   opacity: 1;

@@ -16,6 +16,7 @@
   --teal: #1ec1a2;
   --blue: #2d68f0;
 }
+
 body {
   box-sizing: border-box;
   margin: 0;
@@ -43,6 +44,11 @@ p {
   color: var(--white);
   text-transform: uppercase;
   font-style: normal;
+}
+
+ul,
+li {
+  padding: 0;
 }
 
 .header-1 {
@@ -88,6 +94,6 @@ p {
   font-family: var(--body-font);
   font-weight: 400;
   font-size: 14px;
-  /* line-height: 25px; */
+  line-height: 25px;
   color: var(--white);
 }

@@ -1,0 +1,25 @@
+.button {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  background: transparent;
+  width: 100%;
+  cursor: pointer;
+  padding: 12px 28px;
+  margin-bottom: 16px;
+
+  &:hover {
+    background: rgba(216, 216, 216, 0.2);
+    border: 1px solid transparent;
+  }
+}
+
+.buttonChildren {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 12px;
+
+  letter-spacing: 2.57143px;
+  text-transform: uppercase;
+  color: var(--white);
+}
