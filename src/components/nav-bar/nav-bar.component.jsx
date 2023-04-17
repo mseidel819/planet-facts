@@ -60,7 +60,7 @@ const NavBar = () => {
             className={`${styles.hamburger} ${
               mobileActive && styles.activeHamburger
             }`}>
-            <Image src={hamburgerLogo} />
+            <Image alt="" src={hamburgerLogo} />
           </button>
         </div>
         {mobileActive && <MobileMenu handler={routeHandler} />}
