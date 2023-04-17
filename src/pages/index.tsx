@@ -3,8 +3,25 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 // import styles from "@/styles/Home.module.css";
 import NavBar from "../components/nav-bar/nav-bar.component";
+import { useRouter } from "next/router";
 
 export default function Home() {
+  const router = useRouter();
+
+  const planetArr = [
+    "Mercury",
+    "Venus",
+    "Earth",
+    "Mars",
+    "Jupiter",
+    "Saturn",
+    "Uranus",
+    "Neptune",
+  ];
+
+  const routeHandler = (route: string) => {
+    router.push(`/${route}`);
+  };
   return (
     <>
       <Head>
@@ -17,7 +34,16 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <NavBar></NavBar>
+        <h1> Choose your planet</h1>
+        <ul>
+          {planetArr.map((planet) => (
+            <li key={planet}>
+              <button onClick={() => routeHandler(planet.toLowerCase())}>
+                {planet}
+              </button>
+            </li>
+          ))}
+        </ul>
       </main>
       {/* <main className={styles.main}>
         <div className={styles.description}>
