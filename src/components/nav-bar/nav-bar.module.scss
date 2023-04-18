@@ -1,5 +1,4 @@
 @use "../../styles/breakpoints.scss" as *;
-@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@500&family=League+Spartan:wght@400;700&display=swap");
 
 .nav_bar {
   display: flex;
@@ -24,7 +23,7 @@
 
 .nav_title {
   font-size: 28px;
-  font-family: "Antonio", sans-serif;
+  font-family: var(--header-font);
   font-weight: 400;
   color: var(--white);
   letter-spacing: -1.05px;
@@ -35,7 +34,7 @@
 }
 
 .planets {
-  font-family: "League Spartan", sans-serif;
+  font-family: var(--body-font);
   font-weight: 500;
   font-size: 11px;
   text-transform: uppercase;
