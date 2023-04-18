@@ -25,12 +25,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](./Screenshot 2023-04-18 at 2.10.00 PM.png)
+![Screenshot](./Screenshot 2023-04-18 at 2.10.00 PM.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/mseidel819/planet-facts)
-- Live Site URL: [Add live site URL here]()
+- Solution URL: [github](https://github.com/mseidel819/planet-facts)
+- Live Site URL: [netlify]()
 
 ### Built with
 
