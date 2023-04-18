@@ -15,10 +15,14 @@ const MainContent = ({ data }: MainProps) => {
   const [width, setWidth] = useState<number | undefined>(undefined);
   const [view, setView] = useState("mobile");
 
+  const resizeHandler = () => {
+    setWidth(window.innerWidth);
+  };
+
   useEffect(() => {
-    window.addEventListener("resize", () => {
-      setWidth(window.innerWidth);
-    });
+    resizeHandler();
+
+    window.addEventListener("resize", resizeHandler);
   }, []);
 
   useEffect(() => {
