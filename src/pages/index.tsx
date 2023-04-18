@@ -21,7 +21,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/assets/favicon-32x32.png" />
       </Head>
-      <main className={styles.container}>
+      <div className={styles.container}>
         <h1> Choose your planet</h1>
         <ul className={styles.list}>
           {planetArr.map((planet) => (
@@ -30,7 +30,7 @@ export default function Home() {
             </li>
           ))}
         </ul>
-      </main>
+      </div>
     </>
   );
 }
