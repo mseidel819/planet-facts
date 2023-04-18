@@ -25,7 +25,7 @@ const Button = ({
     <button
       onClick={onClick}
       className={`${styles.button} ${activeStyle} ${activeColor}`}>
-      <div className={styles.buttonChildren}>{children}</div>
+      <span className={styles.buttonChildren}>{children}</span>
     </button>
   );
 };
