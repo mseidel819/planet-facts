@@ -24,12 +24,19 @@
 .left {
   display: flex;
   align-items: center;
+  gap: 24px;
 
-  &:before {
-    content: "";
+  // &:before {
+  //   content: "";
+  //   height: 20px;
+  //   width: 20px;
+  //   background-color: blue;
+  //   border-radius: 1000px;
+  // }
+  .dot {
     height: 20px;
     width: 20px;
-    background-color: blue;
+    // background-color: blue;
     border-radius: 1000px;
   }
 }

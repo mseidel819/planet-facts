@@ -1,16 +1,30 @@
+@use "../../styles/breakpoints.scss" as *;
+
 .container {
   border: 1px solid rgba(255, 255, 255, 0.2);
-  padding: 20px 23px;
-  margin-bottom: 58px;
-  width: 100%;
-  max-width: 255px;
+  padding: 9px 24px;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+
+  @include respond-to("small") {
+    display: block;
+    padding: 16px 8px 16px 15px;
+
+    margin-bottom: 58px;
+    width: 100%;
+
+    max-width: 255px;
+  }
+
+  @include respond-to("medium") {
+    padding: 20px 23px;
+  }
 }
 
 .title {
   font-weight: 700;
   font-size: 11px;
-  // line-height: 25px;
-  /* identical to box height, or 227% */
 
   letter-spacing: 1px;
   text-transform: uppercase;

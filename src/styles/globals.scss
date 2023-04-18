@@ -1,3 +1,5 @@
+@use "../styles/breakpoints.scss" as *;
+
 @import url("https://fonts.googleapis.com/css2?family=Antonio:wght@500&family=League+Spartan:wght@400;700&display=swap");
 /* import stars from "../assets/background-stars.svg"; */
 :root {
@@ -54,48 +56,73 @@ li {
 .header-1 {
   font-family: var(--header-font);
   font-weight: 500;
-  font-size: 80px;
+  font-size: 40px;
   color: var(--white);
   /* line-height: 104px; */
   text-transform: uppercase;
+
+  @include respond-to("small") {
+    font-size: 48px;
+  }
+  @include respond-to("medium") {
+    font-size: 80px;
+  }
 }
 .header-2 {
   font-family: var(--header-font);
   font-weight: 500;
-  font-size: 40px;
+  font-size: 20px;
   color: var(--white);
   /* line-height: 52px; */
   letter-spacing: -1.5px;
   text-transform: uppercase;
+
+  @include respond-to("small") {
+    font-size: 24px;
+  }
+  @include respond-to("medium") {
+    font-size: 40px;
+  }
 }
 .header-3 {
   font-family: var(--body-font);
   font-weight: 700;
-  font-size: 12px;
-  font-size: 12px;
+  font-size: 9px;
   /* line-height: 25px; */
   letter-spacing: 2.57143px;
   text-transform: uppercase;
 
   color: var(--white);
+
+  @include respond-to("medium") {
+    font-size: 12px;
+  }
 }
 .header-4 {
   font-family: var(--body-font);
   font-weight: 700;
-  font-size: 11px;
+  font-size: 8px;
   /* line-height: 25px; */
 
   letter-spacing: 1px;
   text-transform: uppercase;
 
   color: var(--white);
+
+  @include respond-to("medium") {
+    font-size: 11px;
+  }
 }
 .body {
   font-family: var(--body-font);
   font-weight: 400;
-  font-size: 14px;
+  font-size: 11px;
   line-height: 25px;
   color: var(--white);
+
+  @include respond-to("medium") {
+    font-size: 14px;
+  }
 }
 
 .mercury {

@@ -1,21 +1,12 @@
 const { default: Image } = require("next/image");
 import { useRouter } from "next/router";
+import { planetArr } from "../../data";
 
 import rightArrow from "../../../public/assets/right-arrow.svg";
 import styles from "./mobile.module.scss";
 
 const MobileMenu = ({ handler }) => {
-  const router = useRouter();
-  const planetArr = [
-    "Mercury",
-    "Venus",
-    "Earth",
-    "Mars",
-    "Jupiter",
-    "Saturn",
-    "Uranus",
-    "Neptune",
-  ];
+  // const router = useRouter();
 
   return (
     <div className={styles.container}>
@@ -26,7 +17,7 @@ const MobileMenu = ({ handler }) => {
             className={styles.menuItem}
             key={planet}>
             <div className={styles.left}>
-              <div>dot</div>
+              <div className={`${styles.dot} ${planet.toLowerCase()}`}></div>
               <h2 className={styles.name}>{planet}</h2>
             </div>
             <div>

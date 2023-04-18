@@ -256,3 +256,14 @@ export function getPlanetByName(name) {
   // const formattedName = name.charAt(0).toUpperCase() + name.slice(1);
   return data.find((planet) => planet.name === name);
 }
+
+export const planetArr = [
+  "Mercury",
+  "Venus",
+  "Earth",
+  "Mars",
+  "Jupiter",
+  "Saturn",
+  "Uranus",
+  "Neptune",
+];

@@ -4,20 +4,10 @@ import styles from "./index.module.scss";
 // import NavBar from "../components/nav-bar/nav-bar.component";
 import Button from "../components/ui/button.component";
 import { useRouter } from "next/router";
+import { planetArr } from "@/data";
 
 export default function Home() {
   const router = useRouter();
-
-  const planetArr = [
-    "Mercury",
-    "Venus",
-    "Earth",
-    "Mars",
-    "Jupiter",
-    "Saturn",
-    "Uranus",
-    "Neptune",
-  ];
 
   const routeHandler = (route: string) => {
     router.push(`/${route}`);

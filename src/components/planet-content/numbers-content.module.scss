@@ -1,7 +1,20 @@
+@use "../../styles/breakpoints.scss" as *;
+
 .container {
   max-width: 1110px;
   margin: 0 auto;
   display: flex;
-  gap: 30px;
+  flex-direction: column;
+  gap: 0px;
   justify-content: space-between;
+  padding: 0 40px;
+
+  @include respond-to("small") {
+    flex-direction: row;
+    gap: 11px;
+  }
+  @include respond-to("medium") {
+    padding: 0;
+    gap: 30px;
+  }
 }

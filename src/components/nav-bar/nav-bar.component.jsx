@@ -4,23 +4,13 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 import hamburgerLogo from "../../../public/assets/hamburger.svg";
 import MobileMenu from "../ui/mobile.component";
+import { planetArr } from "@/data";
 
 const NavBar = () => {
   const router = useRouter();
   const [active, setActive] = useState("");
   const [mobileActive, setMobileActive] = useState(false);
   const [test, setTest] = useState(0);
-
-  const planetArr = [
-    "Mercury",
-    "Venus",
-    "Earth",
-    "Mars",
-    "Jupiter",
-    "Saturn",
-    "Uranus",
-    "Neptune",
-  ];
 
   let theme = "";
 
