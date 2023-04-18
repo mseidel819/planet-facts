@@ -4,7 +4,6 @@
   z-index: 4;
   background-color: var(--black);
   background-image: url("../../../public/background-stars.svg");
-  //   padding: 44px 32px;
 }
 
 .inner {
@@ -26,17 +25,9 @@
   align-items: center;
   gap: 24px;
 
-  // &:before {
-  //   content: "";
-  //   height: 20px;
-  //   width: 20px;
-  //   background-color: blue;
-  //   border-radius: 1000px;
-  // }
   .dot {
     height: 20px;
     width: 20px;
-    // background-color: blue;
     border-radius: 1000px;
   }
 }
@@ -44,9 +35,6 @@
 .name {
   font-weight: 700;
   font-size: 15px;
-  //   line-height: 25px;
-  /* identical to box height, or 167% */
-
   text-align: center;
   letter-spacing: 1.36364px;
   text-transform: uppercase;

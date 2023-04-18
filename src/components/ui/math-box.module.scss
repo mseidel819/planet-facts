@@ -10,10 +10,8 @@
   @include respond-to("small") {
     display: block;
     padding: 16px 8px 16px 15px;
-
     margin-bottom: 58px;
     width: 100%;
-
     max-width: 255px;
   }
 

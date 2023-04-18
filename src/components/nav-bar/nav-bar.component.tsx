@@ -12,8 +12,6 @@ const NavBar = () => {
   const [mobileActive, setMobileActive] = useState(false);
   const [width, setWidth] = useState(0);
 
-  let theme = "";
-
   useEffect(() => {
     setActive(router.query.planet as string);
   }, [router.query.planet]);

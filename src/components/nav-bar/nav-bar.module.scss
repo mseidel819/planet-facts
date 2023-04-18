@@ -10,7 +10,6 @@
   padding: 0px 40px 0px 32px;
   align-items: center;
   border-bottom: 1px solid rgba(260, 260, 260, 0.2);
-  // height: 85px;
 
   @include respond-to("medium") {
     flex-direction: row;
@@ -19,10 +18,8 @@
 .tabs_container {
   height: 100%;
   display: flex;
-
   align-items: center;
   gap: 33px;
-  /* padding: 22px 0px 27px 0px; */
 }
 
 .nav_title {
@@ -30,17 +27,14 @@
   font-family: "Antonio", sans-serif;
   font-weight: 400;
   color: var(--white);
-  /* line-height: 36px; */
   letter-spacing: -1.05px;
   text-transform: uppercase;
-
   background-color: transparent;
   border: none;
   cursor: pointer;
 }
 
 .planets {
-  /* height: 100%; */
   font-family: "League Spartan", sans-serif;
   font-weight: 500;
   font-size: 11px;
@@ -57,11 +51,6 @@
 }
 .planets:hover {
   opacity: 1;
-  /* border-top: 4px solid var(--sky-blue); */
-}
-
-.active {
-  // border-top: 4px solid var(--sky-blue);
 }
 
 .mobile_nav_bar {

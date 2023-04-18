@@ -101,6 +101,24 @@
   );
 }
 
+.astro_body {
+  width: 85px;
+  height: 100px;
+  position: absolute;
+  z-index: 2;
+  background-color: #fffbff;
+  border-radius: 40px / 20px;
+  top: 105px;
+  left: calc(50% - 41px);
+  background: -webkit-linear-gradient(
+    left,
+    #e3e8eb 0%,
+    #e3e8eb 50%,
+    #fbfdfa 50%,
+    #fbfdfa 100%
+  );
+}
+
 .panel {
   width: 60px;
   height: 40px;

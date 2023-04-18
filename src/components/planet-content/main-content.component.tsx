@@ -30,22 +30,19 @@ const MainContent = ({ data }: MainProps) => {
   }, [width, setWidth]);
 
   const toolTip: {
-    [key: string]: { height: number; width: number; top: string };
+    [key: string]: { height: number; width: number };
   } = {
     desktop: {
       height: 199,
       width: 163,
-      top: "40%",
     },
     tablet: {
       height: 99,
       width: 86,
-      top: "40%",
     },
     mobile: {
       height: 99,
       width: 86,
-      top: "40%",
     },
   };
 

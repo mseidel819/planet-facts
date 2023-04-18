@@ -11,9 +11,6 @@
   justify-content: space-between;
   align-items: center;
 
-  @include respond-to("small") {
-    // margin-top: 66px;
-  }
   @include respond-to("medium") {
     flex-direction: row;
     margin-top: 126px;
@@ -31,7 +28,6 @@
     max-width: 3500px;
     gap: 69px;
     align-items: center;
-    // width: 100%;
   }
 
   @include respond-to("medium") {
@@ -82,8 +78,6 @@
   position: relative;
   aspect-ratio: 1/1;
   max-width: 400px;
-  /* height: 400px; */
-  // margin-left: 80px;
   margin-bottom: 40px;
 
   @include respond-to("medium") {

@@ -1,4 +1,4 @@
-const { default: Image } = require("next/image");
+const Image = require("next/image");
 import { planetArr } from "../../data";
 
 import rightArrow from "../../../public/assets/right-arrow.svg";

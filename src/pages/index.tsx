@@ -1,7 +1,5 @@
 import Head from "next/head";
-import Image from "next/image";
 import styles from "./index.module.scss";
-// import NavBar from "../components/nav-bar/nav-bar.component";
 import Button from "../components/ui/button.component";
 import { useRouter } from "next/router";
 import { planetArr } from "@/data";

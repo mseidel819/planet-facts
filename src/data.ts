@@ -12,18 +12,6 @@ export type Data = {
       source: string;
     };
   };
-  // overview: {
-  //   content: string;
-  //   source: string;
-  // };
-  // structure: {
-  //   content: string;
-  //   source: string;
-  // };
-  // geology: {
-  //   content: string;
-  //   source: string;
-  // };
   rotation: string;
   revolution: string;
   radius: string;
@@ -387,7 +375,6 @@ export const data: Data[] = [
 
 export function getPlanetByName(name: string) {
   if (!name) return;
-  // const formattedName = name.charAt(0).toUpperCase() + name.slice(1);
   return data.find((planet) => planet.name === name);
 }
 
