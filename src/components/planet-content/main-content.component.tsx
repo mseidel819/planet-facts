@@ -55,7 +55,7 @@ const MainContent = ({ data }: MainProps) => {
 
   return (
     <>
-      {width && width < 700 && (
+      {width && width < 600 && (
         <div className={styles.mobileContainer}>
           <MobileButtonBar
             color={data.name.toLowerCase()}
