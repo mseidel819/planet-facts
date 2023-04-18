@@ -25,7 +25,7 @@ Users should be able to:
 
 ### Screenshot
 
-![Screenshot](./Screenshot 2023-04-18 at 2.10.00 PM.png)
+![Screenshot](/Screenshot 2023-04-18 at 2.10.00 PM.png)
 
 ### Links
 
