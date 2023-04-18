@@ -1,4 +1,4 @@
-import NavBar from "@/components/nav-bar/nav-bar.component";
+import NavBar from "../components/nav-bar/nav-bar.component";
 import "@/styles/globals.scss";
 import type { AppProps } from "next/app";
 

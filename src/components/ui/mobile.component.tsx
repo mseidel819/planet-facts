@@ -1,13 +1,14 @@
 const { default: Image } = require("next/image");
-import { useRouter } from "next/router";
 import { planetArr } from "../../data";
 
 import rightArrow from "../../../public/assets/right-arrow.svg";
 import styles from "./mobile.module.scss";
 
-const MobileMenu = ({ handler }) => {
-  // const router = useRouter();
+type MobileMenuProps = {
+  handler: (planet: string) => void;
+};
 
+const MobileMenu = ({ handler }: MobileMenuProps) => {
   return (
     <div className={styles.container}>
       <div className={styles.inner}>

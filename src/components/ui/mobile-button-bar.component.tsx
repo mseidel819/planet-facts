@@ -1,6 +1,19 @@
+import { ReactNode } from "react";
 import styles from "./mobile-button-bar.module.scss";
 
-const MobileButtonBar = ({ color, active, onClick, children }) => {
+type MobileButtonBarProps = {
+  color: string;
+  active: boolean;
+  onClick: () => void;
+  children: ReactNode;
+};
+
+const MobileButtonBar = ({
+  color,
+  active,
+  onClick,
+  children,
+}: MobileButtonBarProps) => {
   let activeStyle = "";
   let activeColor = "";
   if (active) {

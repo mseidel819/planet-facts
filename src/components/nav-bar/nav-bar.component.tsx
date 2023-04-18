@@ -8,14 +8,14 @@ import { planetArr } from "@/data";
 
 const NavBar = () => {
   const router = useRouter();
-  const [active, setActive] = useState("");
+  const [active, setActive] = useState<string>("");
   const [mobileActive, setMobileActive] = useState(false);
   const [width, setWidth] = useState(0);
 
   let theme = "";
 
   useEffect(() => {
-    setActive(router.query.planet);
+    setActive(router.query.planet as string);
   }, [router.query.planet]);
 
   useEffect(() => {
@@ -25,14 +25,14 @@ const NavBar = () => {
   }, []);
 
   const activeHandler = () => {
-    setActive(router.query.planet);
+    setActive(router.query.planet as string);
   };
 
   const mobileToggler = () => {
     setMobileActive(!mobileActive);
   };
 
-  const routeHandler = (route) => {
+  const routeHandler = (route: string) => {
     router.push(`/${route}`);
     setMobileActive(false);
   };
@@ -75,7 +75,7 @@ const NavBar = () => {
                 key={i}
                 className={`${styles.planets} ${activeColor}`}
                 onClick={() => {
-                  activeHandler(planet);
+                  activeHandler();
                   routeHandler(planet);
                 }}>
                 {planet}

@@ -1,6 +1,12 @@
+import { Data } from "@/data";
 import MathBox from "../ui/math-box.component";
 import styles from "./numbers-content.module.scss";
-const NumbersContent = ({ data }) => {
+
+type NumbersProps = {
+  data: Data;
+};
+
+const NumbersContent = ({ data }: NumbersProps) => {
   return (
     <div className={styles.container}>
       <MathBox title="Rotation Time" data={data.rotation} />

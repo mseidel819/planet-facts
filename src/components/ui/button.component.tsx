@@ -1,7 +1,19 @@
-import { useState } from "react";
+import { ReactNode } from "react";
 import styles from "./button.module.scss";
 
-const Button = ({ color, active, onClick, children }) => {
+type ButtonProps = {
+  color?: string;
+  active?: boolean;
+  onClick: () => void;
+  children: ReactNode;
+};
+
+const Button = ({
+  color = "",
+  active = false,
+  onClick,
+  children,
+}: ButtonProps) => {
   let activeStyle = "";
   let activeColor = "";
   if (active) {
