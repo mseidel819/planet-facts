@@ -30,7 +30,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [github](https://github.com/mseidel819/planet-facts)
-- Live Site URL: [netlify]()
+- Live Site URL: [netlify](https://splendid-pegasus-ce4c5e.netlify.app/)
 
 ### Built with
 
