@@ -21,7 +21,7 @@ export default function Home() {
           content="A bunch of planet facts by frontend mentor"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/assets/favicon-32x32.png" />
       </Head>
       <main className={styles.container}>
         <h1> Choose your planet</h1>
@@ -33,12 +33,6 @@ export default function Home() {
           ))}
         </ul>
       </main>
-      {/* <main className={styles.main}>
-        <div className={styles.description}>
-          <p>
-            Get started by editing&nbsp;
-            <code className={styles.code}>src/pages/index.tsx</code>
-          </p> */}
     </>
   );
 }
