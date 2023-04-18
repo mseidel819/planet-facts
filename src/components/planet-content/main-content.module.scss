@@ -1,0 +1,115 @@
+@use "../../styles/breakpoints.scss" as *;
+
+.container {
+  max-width: 1110px;
+  padding: 0 25px;
+  margin: 0 auto;
+  // margin-top: 66px;
+  margin-bottom: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  @include respond-to("small") {
+    margin-top: 66px;
+  }
+  @include respond-to("medium") {
+    flex-direction: row;
+    margin-top: 126px;
+    margin-bottom: 87px;
+  }
+}
+
+.textContent {
+  max-width: 350px;
+  display: flex;
+  text-align: center;
+
+  @include respond-to("small") {
+    text-align: left;
+    max-width: 3500px;
+    gap: 69px;
+    align-items: center;
+    // width: 100%;
+  }
+
+  @include respond-to("medium") {
+    flex-direction: column;
+    gap: 0px;
+    align-items: start;
+  }
+}
+
+.title {
+  margin-bottom: 23px;
+}
+.para {
+  margin-bottom: 24px;
+
+  @include respond-to("small") {
+    max-width: 339px;
+  }
+
+  @include respond-to("medium") {
+  }
+}
+
+.source {
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}
+.link {
+  color: var(--white);
+  font-weight: 700;
+}
+
+.span {
+  opacity: 0.5;
+}
+
+.buttonText {
+  margin: 0;
+  margin-left: 28px;
+}
+
+.imgContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  aspect-ratio: 1/1;
+  width: 400px;
+  /* height: 400px; */
+  // margin-left: 80px;
+  margin-bottom: 40px;
+
+  @include respond-to("medium") {
+    flex-direction: row;
+    margin-left: 80px;
+    margin-bottom: 0px;
+  }
+}
+
+.imgSpan {
+  position: absolute;
+  bottom: -130px;
+  transform: translateX(-50%);
+  left: 50%;
+}
+
+.buttonContainer {
+  display: none;
+
+  @include respond-to("small") {
+    display: block;
+    max-width: 280px;
+  }
+}
+
+.mobileContainer {
+  width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  justify-content: space-around;
+}

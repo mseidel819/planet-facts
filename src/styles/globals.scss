@@ -151,42 +151,66 @@ li {
 }
 
 .mercury-nav {
+  border-color: var(--sky-blue) !important;
+
   &:hover {
-    border-top: 4px solid var(--sky-blue);
+    // border-top: 4px solid var(--sky-blue);
+    border-color: var(--sky-blue);
   }
 }
 .venus-nav {
+  border-color: var(--yellow) !important;
+
   &:hover {
-    border-top: 4px solid var(--yellow);
+    // border-top: 4px solid var(--yellow);
+    border-color: var(--yellow);
   }
 }
 .earth-nav {
+  border-color: var(--purple) !important;
+
   &:hover {
-    border-top: 4px solid var(--purple);
+    // border-top: 4px solid var(--purple);
+    border-color: var(--purple);
   }
 }
 .mars-nav {
+  border-color: var(--red-orange) !important;
+
   &:hover {
-    border-top: 4px solid var(--red-orange);
+    // border-top: 4px solid var(--red-orange);
+    border-color: var(--red-orange);
   }
 }
 .jupiter-nav {
+  border-color: var(--red) !important;
+
   &:hover {
-    border-top: 4px solid var(--red);
+    // border-top: 4px solid var(--red);
+    border-color: var(--red);
   }
 }
 .saturn-nav {
+  border-color: var(--orange) !important;
+
   &:hover {
-    border-top: 4px solid var(--orange);
+    // border-top: 4px solid var(--orange);
+    border-color: var(--orange);
   }
 }
 .uranus-nav {
+  border-color: var(--teal) !important;
+
   &:hover {
-    border-top: 4px solid var(--teal);
+    // border-top: 4px solid var(--teal);
+    border-color: var(--teal);
   }
 }
 .neptune-nav {
+  border-color: var(--blue) !important;
+
   &:hover {
-    border-top: 4px solid var(--blue);
+    // border-top: 4px solid var(--blue);
+    border-color: var(--blue);
   }
 }

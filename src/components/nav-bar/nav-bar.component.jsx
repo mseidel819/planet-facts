@@ -10,7 +10,7 @@ const NavBar = () => {
   const router = useRouter();
   const [active, setActive] = useState("");
   const [mobileActive, setMobileActive] = useState(false);
-  const [test, setTest] = useState(0);
+  const [width, setWidth] = useState(0);
 
   let theme = "";
 
@@ -20,7 +20,7 @@ const NavBar = () => {
 
   useEffect(() => {
     window.addEventListener("resize", () => {
-      setTest(window.innerWidth);
+      setWidth(window.innerWidth);
     });
   }, []);
 
@@ -37,7 +37,7 @@ const NavBar = () => {
     setMobileActive(false);
   };
 
-  if (test && test < 700) {
+  if (width && width < 700) {
     return (
       <>
         <div className={styles.mobile_nav_bar}>
@@ -65,40 +65,15 @@ const NavBar = () => {
 
         <div className={styles.tabs_container}>
           {planetArr.map((planet, i) => {
-            switch (planet) {
-              case "Mercury":
-                theme = "mercury-nav";
-                break;
-              case "Venus":
-                theme = "venus-nav";
-                break;
-              case "Earth":
-                theme = "earth-nav";
-                break;
-              case "Mars":
-                theme = "mars-nav";
-                break;
-              case "Jupiter":
-                theme = "jupiter-nav";
-                break;
-              case "Saturn":
-                theme = "saturn-nav";
-                break;
-              case "Uranus":
-                theme = "uranus-nav";
-                break;
-              case "Neptune":
-                theme = "neptune-nav";
-                break;
-              default:
-                theme = "";
+            let activeColor = "";
+            if (active === planet) {
+              activeColor = `${planet.toLowerCase()}-nav`;
             }
+
             return (
               <button
                 key={i}
-                className={`${styles.planets} ${theme} ${
-                  active === planet ? styles.active : ""
-                }`}
+                className={`${styles.planets} ${activeColor}`}
                 onClick={() => {
                   activeHandler(planet);
                   routeHandler(planet);
