@@ -2,8 +2,18 @@ export const data = [
   {
     name: "Mercury",
     size: {
-      height: 290,
-      width: 290,
+      desktop: {
+        height: 290,
+        width: 290,
+      },
+      tablet: {
+        height: 184,
+        width: 184,
+      },
+      mobile: {
+        height: 111,
+        width: 111,
+      },
     },
     overview: {
       content:
@@ -34,8 +44,18 @@ export const data = [
   {
     name: "Venus",
     size: {
-      height: 400,
-      width: 400,
+      desktop: {
+        height: 400,
+        width: 400,
+      },
+      tablet: {
+        height: 253,
+        width: 253,
+      },
+      mobile: {
+        height: 154,
+        width: 154,
+      },
     },
     overview: {
       content:
@@ -65,8 +85,18 @@ export const data = [
   {
     name: "Earth",
     size: {
-      height: 450,
-      width: 450,
+      desktop: {
+        height: 450,
+        width: 450,
+      },
+      tablet: {
+        height: 285,
+        width: 285,
+      },
+      mobile: {
+        height: 173,
+        width: 173,
+      },
     },
     overview: {
       content:
@@ -96,8 +126,18 @@ export const data = [
   {
     name: "Mars",
     size: {
-      height: 336,
-      width: 336,
+      desktop: {
+        height: 336,
+        width: 336,
+      },
+      tablet: {
+        height: 213,
+        width: 213,
+      },
+      mobile: {
+        height: 129,
+        width: 129,
+      },
     },
     overview: {
       content:
@@ -127,8 +167,18 @@ export const data = [
   {
     name: "Jupiter",
     size: {
-      height: 582,
-      width: 582,
+      desktop: {
+        height: 582,
+        width: 582,
+      },
+      tablet: {
+        height: 369,
+        width: 369,
+      },
+      mobile: {
+        height: 224,
+        width: 224,
+      },
     },
     overview: {
       content:
@@ -159,8 +209,18 @@ export const data = [
   {
     name: "Saturn",
     size: {
-      height: 666,
-      width: 666,
+      desktop: {
+        height: 666,
+        width: 666,
+      },
+      tablet: {
+        height: 422,
+        width: 422,
+      },
+      mobile: {
+        height: 256,
+        width: 256,
+      },
     },
     overview: {
       content:
@@ -190,8 +250,18 @@ export const data = [
   {
     name: "Uranus",
     size: {
-      height: 458,
-      width: 458,
+      desktop: {
+        height: 458,
+        width: 458,
+      },
+      tablet: {
+        height: 290,
+        width: 290,
+      },
+      mobile: {
+        height: 176,
+        width: 176,
+      },
     },
     overview: {
       content:
@@ -221,8 +291,18 @@ export const data = [
   {
     name: "Neptune",
     size: {
-      height: 450,
-      width: 450,
+      desktop: {
+        height: 458,
+        width: 458,
+      },
+      tablet: {
+        height: 285,
+        width: 285,
+      },
+      mobile: {
+        height: 173,
+        width: 173,
+      },
     },
     overview: {
       content:

@@ -8,12 +8,39 @@ import MobileButtonBar from "../ui/mobile-button-bar.component";
 const MainContent = ({ data }) => {
   const [section, setSection] = useState("overview");
   const [width, setWidth] = useState(null);
+  const [view, setView] = useState("mobile");
 
   useEffect(() => {
     window.addEventListener("resize", () => {
       setWidth(window.innerWidth);
     });
   }, []);
+
+  useEffect(() => {
+    if (width < 600) {
+      setView("mobile");
+    } else if (width >= 1000) {
+      setView("desktop");
+    } else setView("tablet");
+  }, [width, setWidth]);
+
+  const toolTip = {
+    desktop: {
+      height: 199,
+      width: 163,
+      top: "40%",
+    },
+    tablet: {
+      height: 99,
+      width: 86,
+      top: "40%",
+    },
+    mobile: {
+      height: 99,
+      width: 86,
+      top: "40%",
+    },
+  };
 
   let img = data.images.planet;
   if (section === "structure") img = data.images.internal;
@@ -47,16 +74,16 @@ const MainContent = ({ data }) => {
           <Image
             priority
             alt={data.name}
-            height={data.size.height}
-            width={data.size.width}
+            height={data.size[view].height}
+            width={data.size[view].width}
             src={img}
             // fill
           />
           {section === "geology" && (
             <Image
               className={styles.imgSpan}
-              height="199"
-              width="163"
+              height={toolTip[view].height}
+              width={toolTip[view].width}
               alt="surface image"
               src={data.images.geology}
             />

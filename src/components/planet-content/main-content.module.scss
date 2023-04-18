@@ -4,7 +4,7 @@
   max-width: 1110px;
   padding: 0 25px;
   margin: 0 auto;
-  // margin-top: 66px;
+  margin-top: 66px;
   margin-bottom: 28px;
   display: flex;
   flex-direction: column;
@@ -12,7 +12,7 @@
   align-items: center;
 
   @include respond-to("small") {
-    margin-top: 66px;
+    // margin-top: 66px;
   }
   @include respond-to("medium") {
     flex-direction: row;
@@ -49,9 +49,11 @@
 
   @include respond-to("small") {
     max-width: 339px;
+    height: 135px;
   }
 
   @include respond-to("medium") {
+    height: 155px;
   }
 }
 
@@ -79,7 +81,7 @@
   justify-content: center;
   position: relative;
   aspect-ratio: 1/1;
-  width: 400px;
+  max-width: 400px;
   /* height: 400px; */
   // margin-left: 80px;
   margin-bottom: 40px;
@@ -93,8 +95,8 @@
 
 .imgSpan {
   position: absolute;
-  bottom: -130px;
-  transform: translateX(-50%);
+  top: 95%;
+  transform: translate(-50%, -50%);
   left: 50%;
 }
 
