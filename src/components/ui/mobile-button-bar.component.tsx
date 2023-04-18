@@ -21,7 +21,6 @@ const MobileButtonBar = ({
     activeColor = `${color}-nav`;
   }
 
-  console.log(active);
   return (
     <button
       onClick={onClick}
