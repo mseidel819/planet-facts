@@ -19,7 +19,7 @@ const leagueSpartan = League_Spartan({
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <main className={`${antonio.className}  ${leagueSpartan.className}`}>
+    <main className={`${antonio.variable}  ${leagueSpartan.variable}`}>
       <NavBar />
       <Component {...pageProps} />
     </main>

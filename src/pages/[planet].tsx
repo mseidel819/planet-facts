@@ -37,8 +37,7 @@ const PlanetPage = () => {
         <Loader />
       </>
     );
-  }
-  if (!planetObj) {
+  } else if (!planetObj) {
     return (
       <>
         <Head>
@@ -53,23 +52,22 @@ const PlanetPage = () => {
         <h1>PLanet not found!</h1>
       </>
     );
-  }
-
-  return (
-    <>
-      <Head>
-        <title>Planet Facts! | {planet}</title>
-        <meta
-          name="description"
-          content="A bunch of planet facts by frontend mentor"
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/assets/favicon-32x32.png" />
-      </Head>
-      <MainContent data={planetObj} />
-      <NumbersContent data={planetObj} />
-    </>
-  );
+  } else
+    return (
+      <>
+        <Head>
+          <title>Planet Facts! | {planet}</title>
+          <meta
+            name="description"
+            content="A bunch of planet facts by frontend mentor"
+          />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <link rel="icon" href="/assets/favicon-32x32.png" />
+        </Head>
+        <MainContent data={planetObj} />
+        <NumbersContent data={planetObj} />
+      </>
+    );
 };
 
 export default PlanetPage;
