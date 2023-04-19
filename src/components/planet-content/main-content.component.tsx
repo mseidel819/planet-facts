@@ -89,6 +89,7 @@ const MainContent = ({ data }: MainProps) => {
           />
           {section === "geology" && (
             <Image
+              priority
               className={styles.imgSpan}
               height={toolTip[view].height}
               width={toolTip[view].width}
@@ -127,7 +128,7 @@ const MainContent = ({ data }: MainProps) => {
               active={section === "structure"}
               onClick={() => setSection("structure")}>
               <span className={styles.span}>02</span>
-              <p className={styles.buttonText}>Internal Structure</p>
+              <p className={styles.buttonText}>Internal&nbsp;Structure</p>
             </Button>
             <Button
               color={data.name.toLowerCase()}

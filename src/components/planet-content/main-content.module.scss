@@ -101,6 +101,8 @@
   @include respond-to("small") {
     display: block;
     max-width: 280px;
+    max-width: 350px;
+    margin-top: 25px;
   }
 }
 

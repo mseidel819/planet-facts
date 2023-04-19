@@ -114,6 +114,7 @@ li {
   font-size: 11px;
   line-height: 25px;
   color: var(--white);
+  text-transform: none;
 
   @include respond-to("medium") {
     font-size: 14px;

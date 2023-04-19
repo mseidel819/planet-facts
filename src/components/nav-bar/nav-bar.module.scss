@@ -22,6 +22,7 @@
 }
 
 .nav_title {
+  padding: 0;
   font-size: 28px;
   font-family: var(--header-font);
   font-weight: 400;
@@ -35,13 +36,14 @@
 
 .planets {
   font-family: var(--body-font);
-  font-weight: 500;
+  font-weight: 700;
   font-size: 11px;
   text-transform: uppercase;
   color: var(--white);
   letter-spacing: 1px;
   cursor: pointer;
   opacity: 0.75;
+  padding: 0;
   padding-top: 36px;
   padding-bottom: 35px;
   border: none;
