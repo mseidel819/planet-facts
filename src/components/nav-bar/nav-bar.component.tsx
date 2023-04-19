@@ -12,14 +12,17 @@ const NavBar = () => {
   const [mobileActive, setMobileActive] = useState(false);
   const [width, setWidth] = useState(0);
 
+  const resizeHandler = () => {
+    setWidth(window.innerWidth);
+  };
+
   useEffect(() => {
     setActive(router.query.planet as string);
   }, [router.query.planet]);
 
   useEffect(() => {
-    window.addEventListener("resize", () => {
-      setWidth(window.innerWidth);
-    });
+    resizeHandler();
+    window.addEventListener("resize", resizeHandler);
   }, []);
 
   const activeHandler = () => {
@@ -35,7 +38,7 @@ const NavBar = () => {
     setMobileActive(false);
   };
 
-  if (width && width < 700) {
+  if (width && width < 600) {
     return (
       <>
         <div className={styles.mobile_nav_bar}>
