@@ -9,22 +9,14 @@ type MobileButtonBarProps = {
 };
 
 const MobileButtonBar = ({
-  color,
   active,
   onClick,
   children,
 }: MobileButtonBarProps) => {
-  let activeStyle = "";
-  let activeColor = "";
-  if (active) {
-    activeStyle = styles.active;
-    activeColor = `${color}-nav`;
-  }
-
   return (
     <button
       onClick={onClick}
-      className={`${styles.item} ${activeColor} ${activeStyle}`}>
+      className={`${styles.item}  ${active ? styles.active : ""}`}>
       {children}
     </button>
   );

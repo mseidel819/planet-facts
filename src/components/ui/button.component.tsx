@@ -8,23 +8,11 @@ type ButtonProps = {
   children: ReactNode;
 };
 
-const Button = ({
-  color = "",
-  active = false,
-  onClick,
-  children,
-}: ButtonProps) => {
-  let activeStyle = "";
-  let activeColor = "";
-  if (active) {
-    activeStyle = styles.active;
-    activeColor = color;
-  }
-
+const Button = ({ active = false, onClick, children }: ButtonProps) => {
   return (
     <button
       onClick={onClick}
-      className={`${styles.button} ${activeStyle} ${activeColor}`}>
+      className={`${styles.button} ${active ? styles.active : ""}`}>
       <span className={styles.buttonChildren}>{children}</span>
     </button>
   );

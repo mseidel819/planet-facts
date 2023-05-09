@@ -18,8 +18,14 @@ const NavBar = () => {
   };
 
   useEffect(() => {
-    setActive(router.query.planet as RouterQuery);
-  }, [router.query.planet]);
+    const { planet } = router.query as RouterQuery;
+
+    setActive(planet as RouterQuery);
+    document.documentElement.style.setProperty(
+      "--theme-color",
+      `var(--${planet?.toLowerCase()})`
+    );
+  }, [router.query]);
 
   useEffect(() => {
     resizeHandler();
@@ -67,15 +73,12 @@ const NavBar = () => {
 
         <div className={styles.tabs_container}>
           {planetArr.map((planet, i) => {
-            let activeColor = "";
-            if (active === planet) {
-              activeColor = `${planet.toLowerCase()}-nav`;
-            }
-
             return (
               <button
                 key={i}
-                className={`${styles.planets} ${activeColor}`}
+                className={`${styles.planets} ${
+                  active === planet ? styles.active : ""
+                }`}
                 onClick={() => {
                   activeHandler();
                   routeHandler(planet);

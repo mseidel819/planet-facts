@@ -54,6 +54,10 @@
   opacity: 1;
 }
 
+.active {
+  border-color: var(--theme-color);
+}
+
 .mobile_nav_bar {
   display: flex;
   justify-content: space-between;
