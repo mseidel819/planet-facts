@@ -4,16 +4,16 @@ import styles from "./main-content.module.scss";
 import linkIcon from "../../../public/assets/link-icon.svg";
 import { useState, useEffect } from "react";
 import MobileButtonBar from "../ui/mobile-button-bar.component";
-import { Data } from "@/data";
+import { Data, ScreenSize, Section } from "@/types";
 
 type MainProps = {
   data: Data;
 };
 
 const MainContent = ({ data }: MainProps) => {
-  const [section, setSection] = useState("overview");
+  const [section, setSection] = useState<Section>("overview");
   const [width, setWidth] = useState<number | undefined>(undefined);
-  const [view, setView] = useState("mobile");
+  const [view, setView] = useState<ScreenSize>("mobile");
 
   const resizeHandler = () => {
     setWidth(window.innerWidth);

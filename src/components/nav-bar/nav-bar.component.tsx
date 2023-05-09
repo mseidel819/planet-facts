@@ -5,10 +5,11 @@ import Image from "next/image";
 import hamburgerLogo from "../../../public/assets/hamburger.svg";
 import MobileMenu from "../ui/mobile.component";
 import { planetArr } from "@/data";
+import { RouterQuery } from "@/types";
 
 const NavBar = () => {
   const router = useRouter();
-  const [active, setActive] = useState<string>("");
+  const [active, setActive] = useState<RouterQuery>();
   const [mobileActive, setMobileActive] = useState(false);
   const [width, setWidth] = useState(0);
 
@@ -17,7 +18,7 @@ const NavBar = () => {
   };
 
   useEffect(() => {
-    setActive(router.query.planet as string);
+    setActive(router.query.planet as RouterQuery);
   }, [router.query.planet]);
 
   useEffect(() => {
@@ -26,7 +27,7 @@ const NavBar = () => {
   }, []);
 
   const activeHandler = () => {
-    setActive(router.query.planet as string);
+    setActive(router.query.planet as RouterQuery);
   };
 
   const mobileToggler = () => {

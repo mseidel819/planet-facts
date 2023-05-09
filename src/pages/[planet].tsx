@@ -6,6 +6,7 @@ import MainContent from "../components/planet-content/main-content.component";
 import NumbersContent from "../components/planet-content/numbers-content.component";
 import Loader from "../components/ui/loader.component";
 import React from "react";
+import { Planet } from "@/types";
 
 const PlanetPage = () => {
   const router = useRouter();
@@ -20,7 +21,7 @@ const PlanetPage = () => {
 
   const { planet } = router.query;
 
-  const planetObj = getPlanetByName(planet as string);
+  const planetObj = getPlanetByName(planet as Planet);
 
   if (loading) {
     return (

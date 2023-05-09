@@ -1,27 +1,4 @@
-export type Data = {
-  name: string;
-  size: {
-    [key: string]: {
-      height: number;
-      width: number;
-    };
-  };
-  section: {
-    [key: string]: {
-      content: string;
-      source: string;
-    };
-  };
-  rotation: string;
-  revolution: string;
-  radius: string;
-  temperature: string;
-  images: {
-    planet: string;
-    internal: string;
-    geology: string;
-  };
-};
+import { Data, Planet } from "./types";
 
 export const data: Data[] = [
   {
@@ -373,7 +350,7 @@ export const data: Data[] = [
   },
 ];
 
-export function getPlanetByName(name: string) {
+export function getPlanetByName(name: Planet) {
   if (!name) return;
   return data.find((planet) => planet.name === name);
 }
