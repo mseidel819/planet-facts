@@ -1,4 +1,4 @@
-import { Data } from "@/data";
+import { Data } from "@/types";
 import MathBox from "../ui/math-box.component";
 import styles from "./numbers-content.module.scss";
 
