@@ -5,15 +5,36 @@ import linkIcon from "../../../public/assets/link-icon.svg";
 import { useState, useEffect } from "react";
 import MobileButtonBar from "../ui/mobile-button-bar.component";
 import { Data, ScreenSize, Section } from "@/types";
+import { motion, AnimatePresence } from "framer-motion";
 
 type MainProps = {
   data: Data;
+};
+type ImageProps = {
+  src: string;
 };
 
 const MainContent = ({ data }: MainProps) => {
   const [section, setSection] = useState<Section>("overview");
   const [width, setWidth] = useState<number | undefined>(undefined);
   const [view, setView] = useState<ScreenSize>("mobile");
+
+  const ImageComponent = ({ src }: ImageProps) => (
+    <motion.div
+      className={styles.imgLittleContainer}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.3 }}>
+      <Image
+        priority
+        alt={data.name}
+        height={data.size[view].height}
+        width={data.size[view].width}
+        src={src}
+      />
+    </motion.div>
+  );
 
   const resizeHandler = () => {
     setWidth(window.innerWidth);
@@ -84,19 +105,31 @@ const MainContent = ({ data }: MainProps) => {
             alt={data.name}
             height={data.size[view].height}
             width={data.size[view].width}
-            src={img}
+            src={data.images.planet}
             // fill
           />
-          {section === "geology" && (
-            <Image
-              priority
-              className={styles.imgSpan}
-              height={toolTip[view].height}
-              width={toolTip[view].width}
-              alt="surface image"
-              src={data.images.geology}
-            />
-          )}
+          <AnimatePresence>
+            <ImageComponent src={img} key={section} />
+          </AnimatePresence>
+          <AnimatePresence>
+            {section === "geology" && (
+              <motion.div
+                className={styles.tooltipLittleContainer}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.3 }}>
+                <Image
+                  priority
+                  className={styles.imgSpan}
+                  height={toolTip[view].height}
+                  width={toolTip[view].width}
+                  alt="surface image"
+                  src={data.images.geology}
+                />
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
         <div className={styles.textContent}>
           <div>
