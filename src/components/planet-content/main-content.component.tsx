@@ -115,7 +115,6 @@ const MainContent = ({ data }: MainProps) => {
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.3 }}>
                 <Image
-                  priority
                   alt={data.name}
                   height={data.size[view].height}
                   width={data.size[view].width}
