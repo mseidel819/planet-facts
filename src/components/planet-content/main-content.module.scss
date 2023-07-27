@@ -79,7 +79,7 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  // aspect-ratio: 1/1;
+  aspect-ratio: 1/1;
   width: 100%;
   max-width: 400px;
   margin-bottom: 100px;
@@ -94,29 +94,13 @@
 }
 .imgLittleContainer {
   position: absolute;
-  // translate: transform(-50%, -50%);
-  // top: 0;
-  // left: 50%;
 }
-
-// .imgSpan {
-//   position: absolute;
-//   top: 60%;
-// }
 
 .tooltipLittleContainer {
   position: absolute;
-  // left: 50%;
-  top: 75%;
-
-  @include respond-to("small") {
-    top: 90%;
-    left: 50%;
-
-    transform: translate(-50%, -50%);
-  }
-  @include respond-to("medium") {
-  }
+  left: 50%;
+  top: 90%;
+  transform: translate(-50%, -50%);
 }
 
 .buttonContainer {

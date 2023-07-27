@@ -19,23 +19,6 @@ const MainContent = ({ data }: MainProps) => {
   const [width, setWidth] = useState<number | undefined>(undefined);
   const [view, setView] = useState<ScreenSize>("mobile");
 
-  const ImageComponent = ({ src }: ImageProps) => (
-    <motion.div
-      className={styles.imgLittleContainer}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.3 }}>
-      <Image
-        priority
-        alt={data.name}
-        height={data.size[view].height}
-        width={data.size[view].width}
-        src={src}
-      />
-    </motion.div>
-  );
-
   const resizeHandler = () => {
     setWidth(window.innerWidth);
   };
@@ -71,9 +54,6 @@ const MainContent = ({ data }: MainProps) => {
     },
   };
 
-  let img = data.images.planet;
-  if (section === "structure") img = data.images.internal;
-
   return (
     <>
       {width && width < 600 && (
@@ -100,18 +80,54 @@ const MainContent = ({ data }: MainProps) => {
       )}
       <div className={styles.container}>
         <div className={styles.imgContainer}>
-          <Image
-            priority
-            alt={data.name}
-            height={data.size[view].height}
-            width={data.size[view].width}
-            src={data.images.planet}
-            // fill
-          />
+          <div className={styles.imgLittleContainer}>
+            <Image
+              priority
+              alt={data.name}
+              height={data.size[view].height}
+              width={data.size[view].width}
+              src={data.images.planet}
+              // fill
+            />
+            <AnimatePresence>
+              {section === "geology" && (
+                <motion.div
+                  className={styles.tooltipLittleContainer}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.3 }}>
+                  <Image
+                    priority
+                    className={styles.imgSpan}
+                    height={toolTip[view].height}
+                    width={toolTip[view].width}
+                    alt="surface image"
+                    src={data.images.geology}
+                  />
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
           <AnimatePresence>
-            <ImageComponent src={img} key={section} />
+            {section === "structure" && (
+              <motion.div
+                className={styles.imgLittleContainer}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.3 }}>
+                <Image
+                  priority
+                  alt={data.name}
+                  height={data.size[view].height}
+                  width={data.size[view].width}
+                  src={data.images.internal}
+                />
+              </motion.div>
+            )}
           </AnimatePresence>
-          <AnimatePresence>
+          {/* <AnimatePresence>
             {section === "geology" && (
               <motion.div
                 className={styles.tooltipLittleContainer}
@@ -129,7 +145,7 @@ const MainContent = ({ data }: MainProps) => {
                 />
               </motion.div>
             )}
-          </AnimatePresence>
+          </AnimatePresence> */}
         </div>
         <div className={styles.textContent}>
           <div>
