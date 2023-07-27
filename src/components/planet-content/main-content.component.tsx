@@ -10,9 +10,6 @@ import { motion, AnimatePresence } from "framer-motion";
 type MainProps = {
   data: Data;
 };
-type ImageProps = {
-  src: string;
-};
 
 const MainContent = ({ data }: MainProps) => {
   const [section, setSection] = useState<Section>("overview");
@@ -127,25 +124,6 @@ const MainContent = ({ data }: MainProps) => {
               </motion.div>
             )}
           </AnimatePresence>
-          {/* <AnimatePresence>
-            {section === "geology" && (
-              <motion.div
-                className={styles.tooltipLittleContainer}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.3 }}>
-                <Image
-                  priority
-                  className={styles.imgSpan}
-                  height={toolTip[view].height}
-                  width={toolTip[view].width}
-                  alt="surface image"
-                  src={data.images.geology}
-                />
-              </motion.div>
-            )}
-          </AnimatePresence> */}
         </div>
         <div className={styles.textContent}>
           <div>
